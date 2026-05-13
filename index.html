@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ElgiWeb.io</title>
+<link rel="stylesheet" href="src/style.css">
+</head>
+
+<body>
+
+<nav class="navbar">
+
+    <h2>ElgiWeb.io</h2>
+
+    <ul class="nav-menu">
+        <li><a href="#beranda">Beranda</a></li>
+        <li><a href="#tentang">Tentang</a></li>
+        <li><a href="">Keahlian</a></li>
+        <li><a href="">Project</a></li>
+        <li><a href="">Kontak</a></li>
+    </ul>
+
+    <!-- HAMBURGER -->
+    <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+</nav>
+
+<section class="beranda" id="Beranda">
+    <div class="container">
+        <div class="hero">
+            <h4 class="judul">Halo Semua 🙌, Perkenalkan Saya</h4>
+            <h1 class="nama">ELGI LISTIAN</h1>
+            <h4 class="judul">Mahasiswa | Junior Programer</h4>
+            <p>Belajar web programing itu mudah dan menyenangkan. <b>Bukan!</b></p>
+
+            <a href=""><button><b>Info Detail</b></button></a>
+        </div>
+        <div class="foto"><img src="src/headerv.png" alt=""></div>
+    </div>
+</section>
+
+<section class="tentang" id="tentang">
+    <div class="container">
+        <div class="contet">
+        <h1><b>Tentang saya</b></h1>
+        <h2>Yuk, Belajar Web <br>Programing Bersama SAYA!</h2>
+        <p>Diwebsite ini saya akan mengenalkan tentang <br>dunia programing, Bagi anda yang tertarik Ayo belajar Bersama!</p>
+        </div>
+    </div>
+</section>
+
+<script>
+
+const hamburger = document.getElementById("hamburger");
+const navMenu = document.querySelector(".nav-menu");
+
+hamburger.addEventListener("click", () => {
+
+    hamburger.classList.toggle("active");
+
+    navMenu.classList.toggle("active");
+});
+
+</script>
+
+</body>
+</html>
