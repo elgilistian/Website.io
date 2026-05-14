@@ -91,7 +91,7 @@ body{
 
 
 .judul{
-    margin: 5px 0;
+    margin: 0px 0;
 }
 
 .nama{
@@ -111,7 +111,7 @@ body{
 
 .hero button{
     border-radius: 20px;
-    border-style: solid;
+    border: #161B22;
     background-color: rgb(5, 54, 127);
     color: aliceblue;
     padding: 10px 20px;
@@ -170,8 +170,120 @@ body{
 }
 
 
+.skil{
+    margin-top: 60px;
+    width: 100%;
+    min-height: 60vh;
+    background: #0D1117;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.skil .content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.skil .isi{
+    text-align: center;
+    max-width: 1000px;
+}
+
+.skil .isi h2{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.skil .isi p{
+    color: rgb(133, 129, 129);
+    font-size: 17px;
+    margin-bottom: 50px;
+}
+
+.skil .ahli{
+    display: flex;
+    justify-content: center;
+}
+
+.skil .gambar{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    justify-items: center;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.skil .gambar img{
+    width: 140px;
+    max-width: 100% !important;
+
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.skil .gambar img:hover{
+    transform: translateY(-8px) scale(1.05);
+}
 
 
+
+.statistik{
+    width: 100%;
+    max-width: 700px;
+    margin: 70px auto 0;
+}
+
+.skill{
+    margin-bottom: 0px;
+}
+
+.skill .info{
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.bar{
+    width: 100%;
+    height: 14px;
+    background: #1a2235;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.progress{
+    height: 100%;
+    border-radius: 30px;
+    background: linear-gradient(90deg, #092247, #4da3ff);
+    transition: 0.5s;
+}
+
+.cpp{
+    width: 70%;
+}
+.python{
+    width: 60%;
+}
+.php{
+    width: 40%;
+}
+.html{
+    width: 90%;
+}
+.Figma{
+    width: 95%;
+}
+
+.skil .isi .war{
+    font-size: 12px;
+}
 
 /* Tampilan Mobile */
 @media (max-width: 820px){
@@ -246,6 +358,31 @@ body{
     border-style:solid;
     border-radius: 20px;
    }
+
+   .content{
+    padding: 20px 20px;
+    }
+
+    .skil{
+    min-height: 70vh;
+    }
+
+    .skil .gambar{
+    grid-template-columns: repeat(3, 1fr);  
+    }
+
+    .skil .gambar img{
+        width: 100px;
+    }
+
+    .skil .isi p{
+        font-size: 14px;
+    }
+
+    .skil .isi .war{
+    font-size: 9px;
+    }
+
 
 
 }
