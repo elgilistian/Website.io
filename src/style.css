@@ -1,12 +1,11 @@
 body{
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     background: #0D1117;
     color: white;
 }
-html{
-    scroll-behavior: smooth;
-}
+
 
 
 /* NAVBAR */
@@ -26,7 +25,7 @@ html{
 .navbar h2{
     margin: 0 100px;
     font-weight: 800;
-    color: rgb(8, 78, 184);
+    color: rgb(12, 101, 236);
 }
 
 
@@ -34,7 +33,7 @@ html{
 .nav-menu{
     margin: 0 100px;
     display: flex;
-    gap: 20px;
+    gap: 60px;
     list-style: none;
 }
 
@@ -97,11 +96,17 @@ html{
 
 .nama{
     margin: 0;
-    color: rgb(8, 78, 184);
+    color: rgb(22, 104, 228);
 }
 
 .hero p{
-    font-size: 15px;
+    padding: 15px 0;
+    font-size: 17px;
+}
+
+.hero p button{
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .hero button{
@@ -117,6 +122,55 @@ html{
     background-color: rgb(69, 94, 94);
 }
 
+.tentang{
+    background: #161B22;
+}
+.tentang h1{
+    font-size: 22px;
+}
+
+
+
+.contet h1{
+    color: rgb(12, 101, 236);
+}
+
+.contet p{
+    font-size: 17px;
+}
+
+.contet h2 span{
+    color: rgb(22, 104, 228);
+    font-weight: 800;
+}
+
+#tentang .container{
+    gap: 200px;
+}
+
+
+.contet1 p{
+    font-size: 17px;
+}
+.contet1 h1{
+    color: rgb(64, 140, 255);
+}
+
+.contet1 img{
+    max-width: 3%;
+    background: rgba(255, 255, 255, 0.926);
+    padding: 10px 10px;
+    border: #053e8f;
+    border-style:solid;
+    border-radius: 20px;
+}
+
+.contet1 img:hover{
+    background: #2d353f;
+}
+
+
+
 
 
 /* Tampilan Mobile */
@@ -131,15 +185,17 @@ html{
     .hero{
         margin-top: 80px;
     }
-
+    .hero p{
+        font-size: 14px;
+    }
 
     .nav-menu{
         position: absolute;
-        top: 90px;
-        right: 10px;
+        top: 70px;
+        right: 20px;
 
-        width: 100px;
-        padding: 20px;
+        width: 90px;
+        padding: 5px 40px;
 
         background: rgb(34, 34, 34);
 
@@ -147,6 +203,7 @@ html{
 
         display: none;
         margin: 0;
+        gap: 20px;
     }
     .navbar h2{
         margin: 0;
@@ -169,16 +226,29 @@ html{
     gap: 40px;
     }
 
+    .contet p{
+        font-size: 14px;
+    }
+
+    #tentang .container{
+    gap: 20px;
+    }
+
+    .contet1 p{
+    font-size: 14px;
+    }
+
+    .contet1 img{
+    max-width: 7%;
+    background: rgba(189, 186, 196, 0.926);
+    padding: 10px 10px;
+    border: #1e4b8a;
+    border-style:solid;
+    border-radius: 20px;
+   }
+
+
 }
 
-.tentang{
-    background: #161B22;
-}
-.tentang h1{
-    font-size: 22px;
-}
 
-.container .contet{
-    flex-direction: column;
-}
 
