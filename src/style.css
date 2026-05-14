@@ -1,3 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,body{
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
 body{
     margin: 0;
     /* font-family: Arial, Helvetica, sans-serif; */
@@ -133,10 +145,12 @@ body{
 
 .contet h1{
     color: rgb(12, 101, 236);
+    margin-bottom: 10px;
 }
 
 .contet p{
     font-size: 17px;
+    margin-top: 10px;
 }
 
 .contet h2 span{
@@ -151,13 +165,15 @@ body{
 
 .contet1 p{
     font-size: 17px;
+    margin-bottom: 10px;
 }
 .contet1 h1{
     color: rgb(64, 140, 255);
+    margin-bottom: 10px;
 }
 
 .contet1 img{
-    max-width: 3%;
+    max-width: 7%;
     background: rgba(255, 255, 255, 0.926);
     padding: 10px 10px;
     border: #053e8f;
@@ -291,9 +307,6 @@ body{
         display: flex;
     }
 
-    .navbar{
-        width: 92%;
-    }
     .hero{
         margin-top: 80px;
     }
@@ -304,17 +317,17 @@ body{
     .nav-menu{
         position: absolute;
         top: 70px;
-        right: 20px;
+        right: 10px;
 
-        width: 90px;
-        padding: 5px 40px;
+        width: 140px;
+        padding: 15px 20px;
 
         background: rgb(34, 34, 34);
 
         flex-direction: column;
 
         display: none;
-        margin: 0;
+        margin: 00px;
         gap: 20px;
     }
     .navbar h2{
@@ -348,10 +361,11 @@ body{
 
     .contet1 p{
     font-size: 14px;
+    margin-bottom: 10px;
     }
 
     .contet1 img{
-    max-width: 7%;
+    max-width: 15%;
     background: rgba(189, 186, 196, 0.926);
     padding: 10px 10px;
     border: #1e4b8a;
@@ -387,5 +401,190 @@ body{
 
 }
 
+.project{
+    width: 100%;
+    min-height: 100vh;
+
+    padding: 60px 20px;
+
+    background: #070B14;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project .container{
+    width: 100%;
+    max-width: 1300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================
+   JUDUL
+========================= */
+
+.project .judul{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.project .judul h2{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.project .judul h1{
+    color: rgb(22, 104, 228);
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.project .judul p{
+    color: #cfcfcf;
+    font-size: 15px;
+    max-width: 700px;
+    margin: auto;
+    line-height: 1.7;
+}
 
 
+/* =========================
+   CARD PROJECT
+========================= */
+
+.project-box{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 35px;
+}
+
+.card-project{
+    background: rgba(255,255,255,0.03);
+
+    border:
+    1px solid rgba(255,255,255,0.05);
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    transition: 0.3s ease;
+}
+
+.card-project:hover{
+    transform: translateY(-10px);
+
+    border:
+    1px solid rgb(22, 104, 228);
+
+    box-shadow:
+    0 0 30px rgba(0,102,255,0.3);
+}
+
+/* =========================
+   GAMBAR
+========================= */
+
+.gambar-project{
+    width: 100%;
+    height: 230px;
+
+    overflow: hidden;
+}
+
+.gambar-project img{
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.3s ease;
+}
+
+.card-project:hover img{
+    transform: scale(1.05);
+}
+
+/* =========================
+   ISI
+========================= */
+
+.isi-project{
+    padding: 30px;
+}
+
+.isi-project h3{
+    color: white;
+    font-size: 22px;
+    margin-bottom: 15px;
+
+}
+
+.isi-project p{
+    color: #cfcfcf;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.isi-project a{
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    background:
+    linear-gradient(
+        90deg,
+        #265294,
+        #164578
+    );
+
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    transition: 0.3s ease;
+}
+
+.isi-project a:hover{
+    transform: scale(1.05);
+}
+
+
+@media(max-width:1000px){
+
+    .project-box{
+        grid-template-columns: repeat(2,1fr);
+    }
+}
+
+@media(max-width:820px){
+
+    .project-box{
+        grid-template-columns: 1fr;
+    }
+
+    .project .judul h2{
+        font-size: 22px;
+    }
+
+    .project .judul p{
+        font-size: 14px;
+    }
+
+    .card-project .isi-project h3{
+        font-size: 20px;
+    }
+    .card-project .isi-project p{
+        font-size: 11px;
+    }
+
+    .isi .project a{
+        font-size: 0;
+    }
+}
