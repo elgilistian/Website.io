@@ -260,14 +260,14 @@ body{
 }
 
 .skill{
-    margin-bottom: 0px;
+    margin-bottom: 10px;
 }
 
 .skill .info{
     display: flex;
     justify-content: space-between;
-    color: white;
-    margin-bottom: 10px;
+    color: rgb(243, 237, 237);
+    margin-bottom: 0px;
     font-size: 18px;
 }
 
@@ -293,13 +293,16 @@ body{
     width: 60%;
 }
 .php{
-    width: 40%;
+    width: 35%;
 }
 .html{
     width: 90%;
 }
+.html1{
+    width: 45%;
+}
 .Figma{
-    width: 95%;
+    width: 40%;
 }
 
 .skil .isi .war{
@@ -593,4 +596,554 @@ body{
     .isi .project a{
         font-size: 0;
     }
+}
+
+/* =========================
+   ANIMASI WEBSITE
+========================= */
+
+/* navbar muncul */
+.navbar{
+    animation: navbarSlide 1s ease;
+    z-index: 999;
+}
+
+@keyframes navbarSlide{
+    from{
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* hero text */
+.hero{
+    animation: heroFade 1.2s ease;
+}
+
+@keyframes heroFade{
+    from{
+        transform: translateX(-60px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* foto floating */
+.foto img{
+    animation: floating 4s ease-in-out infinite;
+    transition: 0.4s ease;
+}
+
+.foto img:hover{
+    transform: scale(1.03);
+}
+
+@keyframes floating{
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-15px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* tombol */
+.hero button{
+    transition: 0.3s ease;
+}
+
+.hero button:hover{
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+/* menu underline */
+.nav-menu a{
+    position: relative;
+    transition: 0.3s ease;
+}
+
+.nav-menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0%;
+    height: 2px;
+    background: rgb(60, 148, 183);
+    transition: 0.3s ease;
+}
+
+.nav-menu a:hover::after{
+    width: 100%;
+}
+
+/* fade content */
+.contet,
+.contet1{
+    animation: fadeUp 1.2s ease;
+}
+
+@keyframes fadeUp{
+    from{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* social media */
+.contet1 img{
+    transition: 0.3s ease;
+}
+
+.contet1 img:hover{
+    transform: translateY(-8px) rotate(4deg) scale(1.08);
+    box-shadow: 0 0 20px rgba(37, 99, 235, 0.5);
+}
+
+/* skill icons */
+.skil .gambar img{
+    animation: skillFloat 3s ease-in-out infinite;
+}
+
+.skil .gambar img:nth-child(2){
+    animation-delay: 0.3s;
+}
+
+.skil .gambar img:nth-child(3){
+    animation-delay: 0.6s;
+}
+
+.skil .gambar img:nth-child(4){
+    animation-delay: 0.9s;
+}
+
+.skil .gambar img:nth-child(5){
+    animation-delay: 1.2s;
+}
+
+.skil .gambar img:nth-child(6){
+    animation-delay: 1.5s;
+}
+
+@keyframes skillFloat{
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* project card */
+.card-project{
+    transition: 0.4s ease;
+    animation: projectFade 1s ease;
+}
+
+.card-project:hover{
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 0 25px rgba(37, 99, 235, 0.3);
+}
+
+@keyframes projectFade{
+    from{
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* image zoom */
+.gambar-project img{
+    transition: 0.5s ease;
+}
+
+.gambar-project:hover img{
+    transform: scale(1.05);
+}
+
+/* glow nama */
+.nama{
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow{
+    from{
+        text-shadow: 0 0 5px rgba(37,99,235,0.4);
+    }
+
+    to{
+        text-shadow: 0 0 20px rgba(15, 53, 135, 0.9);
+    }
+}
+
+
+
+
+/* =========================
+   NEON TYPING NAME
+========================= */
+
+.nama{
+    position: relative;
+    display: inline-block;
+
+    font-weight: bold;
+    color: rgb(3, 37, 87);
+
+    text-shadow:
+        0 0 5px #ffffff,
+        0 0 10px #ffffff,
+        0 0 20px #010607,
+        0 0 40px #ffffff;
+
+    animation: neonGlow 2s ease-in-out infinite alternate;
+}
+
+.nama span::before{
+    content: "Elgi Listian";
+    animation: words 8s infinite;
+}
+
+.nama span::after{
+    content: "";
+
+    position: absolute;
+    right: -10px;
+
+    width: calc(100% + 10px);
+    height: 100%;
+
+    background: rgb(34, 34, 34);
+
+    border-left: 3px solid #00d9ff;
+
+    animation:
+        typing 4s steps(14) infinite,
+        cursor .7s infinite;
+}
+
+@keyframes words{
+
+    0%, 50%{
+        content: "Elgi Listian";
+    }
+
+    51%, 100%{
+        content: "Virgi Parker";
+    }
+}
+
+@keyframes typing{
+
+    0%{
+        width: 100%;
+    }
+
+    40%{
+        width: 0;
+    }
+
+    60%{
+        width: 0;
+    }
+
+    100%{
+        width: 100%;
+    }
+}
+
+@keyframes cursor{
+    50%{
+        border-color: transparent;
+    }
+}
+
+@keyframes neonGlow{
+
+    from{
+        text-shadow:
+            0 0 5px #c4c4c4,
+            0 0 10px #00d9ff,
+            0 0 20px #00d9ff,
+            0 0 40px #00d9ff;
+    }
+
+    to{
+        text-shadow:
+            0 0 10px #00d9ff,
+            0 0 20px #00d9ff,
+            0 0 40px #00d9ff,
+            0 0 80px #00d9ff;
+    }
+}
+
+
+/* =========================
+   BLOG SECTION
+========================= */
+
+.blog{
+    padding: 100px 8%;
+    background:  #161B22
+}
+
+.blog-title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.blog-title h1{
+    font-size: 22px;
+    color: rgb(22, 104, 228);
+}
+
+.blog-title p{
+    color: white;
+    font-size: 17px;
+}
+
+.blog-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+    gap: 30px;
+}
+
+.blog-card{
+    background: rgb(34,34,34);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .4s ease;
+    box-shadow: 0 0 15px rgba(0,0,0,.3);
+}
+
+.blog-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(26, 98, 199, 0.4);
+}
+
+.blog-card img{
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.blog-content{
+    padding: 20px;
+}
+
+.blog-content h2{
+    color: white;
+    margin-bottom: 10px;
+}
+
+.blog-content p{
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.blog-content a{
+    display: inline-block;
+    margin-top: 15px;
+    color: rgb(22, 104, 228);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* =========================
+   KONTAK
+========================= */
+
+.kontak{
+    padding: 100px 8%;
+    background: rgb(20,20,20);
+}
+
+.kontak-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.kontak-text{
+    flex: 1;
+}
+
+.kontak-text h1{
+    font-size: 29px;
+    color: rgb(22, 104, 228);
+}
+
+.kontak-text p{
+    color: white;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+.kontak-form{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kontak-form input,
+.kontak-form textarea{
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgb(34,34,34);
+    color: white;
+    outline: none;
+}
+
+.kontak-form textarea{
+    min-height: 140px;
+    resize: none;
+}
+
+.kontak-form button{
+    padding: 15px;
+    border: none;
+    border-radius: 12px;
+    background: rgb(9, 68, 156);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.kontak-form button:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 20px rgba(60,148,183,.5);
+}
+
+
+/* =========================
+   FOOTER PROFESSIONAL
+========================= */
+
+.footer{
+    background: rgb(15,15,15);
+    padding-top: 80px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container{
+    width: 90%;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    gap: 50px;
+}
+
+/* BRAND */
+.footer-brand h1{
+    color: rgb(22, 104, 228);
+    font-size: 35px;
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 0 5px rgba(60,148,183,0.5),
+        0 0 15px rgba(60,148,183,0.3);
+}
+
+.footer-brand p{
+    color: #bdbdbd;
+    line-height: 1.8;
+    font-size: 15px;
+}
+
+/* TITLE */
+.footer-links h2,
+.footer-social h2{
+    color: white;
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+/* LINKS */
+.footer-links,
+.footer-social{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a,
+.footer-social a{
+    color: #bdbdbd;
+    text-decoration: none;
+    margin-bottom: 14px;
+
+    transition: 0.3s ease;
+    width: fit-content;
+
+    position: relative;
+}
+
+.footer-links a:hover,
+.footer-social a:hover{
+    color: rgb(60,148,183);
+    transform: translateX(5px);
+}
+
+.footer-links a::after,
+.footer-social a::after{
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+
+    width: 0%;
+    height: 2px;
+
+    background: rgb(60,148,183);
+
+    transition: 0.3s ease;
+}
+
+.footer-links a:hover::after,
+.footer-social a:hover::after{
+    width: 100%;
+}
+
+/* BOTTOM */
+.footer-bottom{
+    margin-top: 60px;
+    padding: 25px;
+
 }
